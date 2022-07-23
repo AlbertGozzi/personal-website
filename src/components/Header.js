@@ -1,3 +1,5 @@
+import * as React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -11,7 +13,9 @@ import {
 const Header = () => {
   return (
     <div class="flex justify-between content-center my-8 py-1 border-gray-50 border-b-2">
-      <div class="font-extrabold">Albert Gozzi</div>
+      <Link to="/">
+        <div class="font-extrabold"> Albert Gozzi </div>
+      </Link>
       <div class="flex space-x-3 content-center">
         <a href="https://github.com/albertgozzi">
           <FontAwesomeIcon icon={faGithub} />
