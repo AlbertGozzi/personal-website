@@ -3,23 +3,22 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply leading-7;
+    max-width: 720px;
+    margin: 0px auto;
+    padding: 0px 24px 54px 24px;
+  
+    font-family: 'Open Sans';
+    color: #3f3f37;
+
+    overflow-y: overlay;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
   a:hover {
     @apply text-[#3074d9];
   }
 }
-
-body {
-  max-width: 720px;
-  margin: 0px auto;
-  padding: 0px 24px 54px 24px;
-
-  font-family: 'Open Sans';
-  color: #3f3f37;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-/* 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */

@@ -3,37 +3,46 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
-  faFacebookF,
-  faInstagram,
   faLinkedinIn,
-  faAngellist,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   return (
     <div class="flex justify-between content-center my-8 py-1 border-gray-50 border-b-2">
-      <Link to="/">
+      <Link to="/" class="flex flex-row">
         <div class="font-extrabold"> Albert Gozzi </div>
       </Link>
-      <div class="flex space-x-3 content-center">
-        <a href="https://github.com/albertgozzi">
-          <FontAwesomeIcon icon={faGithub} />
+      <div class="flex space-x-5 content-center">
+        <a
+          href="https://twitter.com/albertgozzi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faTwitter} />
         </a>
-        <a href="https://www.facebook.com/albert.gozzi/">
-          <FontAwesomeIcon icon={faFacebookF} />
-        </a>
-        <a href="https://instagram.com/albertgozzi">
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
-        <a href="https://www.linkedin.com/in/albertgozzi">
+        <a
+          href="https://www.linkedin.com/in/albertgozzi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FontAwesomeIcon icon={faLinkedinIn} />
         </a>
-        <a href="https://angel.co/p/albert-gozzi">
-          <FontAwesomeIcon icon={faAngellist} />
+
+        <a
+          href="https://github.com/albertgozzi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://twitter.com/albertgozzi">
-          <FontAwesomeIcon icon={faTwitter} />
+        <a
+          href="mailto:albertgozzi@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faEnvelope} />
         </a>
       </div>
     </div>

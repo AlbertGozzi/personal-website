@@ -8,8 +8,8 @@ const App = () => {
   return (
     <div>
       <Header />
-      <div class="grid grid-cols-5 gap-">
-        <div class="">
+      <div class="grid grid-cols-5 gap-2">
+        <div class="hidden sm:block text-sm">
           <ul>
             <li>
               <Link to="/about">About</Link>
@@ -19,10 +19,19 @@ const App = () => {
             </li>
           </ul>
         </div>
-        <Routes>
-          <Route path="/about" element={<About />} />
-          <Route path="/interests" element={<Interests />} />
-        </Routes>
+        <div class="col-span-5 sm:col-span-4">
+          <Routes>
+            <Route path="/" element={<About />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/interests" element={<Interests />} />
+          </Routes>
+        </div>
+      </div>
+      <div class="sm:hidden mt-8 text-center space-x-3 max-w-full">
+        <Link to="/about">About</Link>
+        <span>⸱</span>
+        <Link to="/interests">Interests</Link>
+        <span>⸱</span>
       </div>
     </div>
   );
